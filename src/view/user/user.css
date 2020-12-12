@@ -1,0 +1,58 @@
+.container-center-register {
+    width: 450px;
+    height: 540px;
+    background: white;
+    align-self: center;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.container-register {
+    width: 100vw;
+    height: 100vh;
+    background: #4e2db3;
+    display: flex;
+    justify-content: center;
+}
+
+.container-center-login {
+    width: 450px;
+    height: 450px;
+    background: white;
+    align-self: center;
+    border-radius: 25px;
+    padding: 5px;
+}
+
+.button-register {
+    width: 45%;
+    margin-left: 10px !important;
+    margin: auto;
+}
+
+.button-register-margin {
+    margin-top: 20px !important;
+}
+
+.logo-register {
+    display: flex;
+}
+
+.logo-register img {
+    width: 250px;
+    margin: auto;
+}
+
+.button-send {
+    margin-top: 30px !important;
+    width: 70%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    display: block !important;
+}
+
+.error-login {
+    color: red;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    text-align: center;
+}

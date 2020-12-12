@@ -1,0 +1,23 @@
+.container-posting-create {
+    width: 50%;
+    margin: auto;
+    margin-top: 100px;
+    padding: 20px;
+    -webkit-box-shadow: 10px 10px 44px -19px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 44px -19px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 44px -19px rgba(0,0,0,0.75);
+    border-radius: 25px;
+}
+
+.label-textarea {
+    color: black;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+
+.text-area-posting {
+    height: 95px !important;
+    overflow: hidden;
+    margin: 0px;
+    width: 300px !important;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+ }
