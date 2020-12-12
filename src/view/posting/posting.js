@@ -136,7 +136,11 @@ const Posting = (props) => {
 
 
     }
-
+    
+    const cerrarSesion = () => {
+        localStorage.clear()
+        history.push('/home')
+    }
 
 
     const classes = useStyles();
@@ -153,6 +157,7 @@ const Posting = (props) => {
                         { user &&
                             <Button color="inherit">{ user.nombre }</Button>
                         }
+                        <Button color="inherit" onClick={() => { cerrarSesion()}}>Cerrar sesion</Button>
                     </Toolbar>
                 </AppBar>
             </div>

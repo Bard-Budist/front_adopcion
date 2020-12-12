@@ -104,6 +104,10 @@ const Blog = (props) => {
             setOpenModal(false);
         };
 
+        const cerrarSesion = () => {
+            localStorage.clear()
+            history.push('/home')
+        }
     return(
         <div className="master-container-blog">
             <AppBar position="static" style={{ background: '#4e2db3'}}>
@@ -116,6 +120,7 @@ const Blog = (props) => {
                     { user &&
                         <Button color="inherit">{ user.nombre }</Button>
                     }
+                    <Button color="inherit" onClick={() => { cerrarSesion()}}>Cerrar sesion</Button>
                     
                 </Toolbar>
             </AppBar>
