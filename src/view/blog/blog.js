@@ -124,7 +124,13 @@ const Blog = (props) => {
                             <Button color="inherit" onClick={() => { cerrarSesion()}}>Cerrar sesion</Button>
                         </div>
                         )
-                    } 
+                    }
+                    {!user && (
+                        <div>
+                            <Button color="inherit" onClick={() => { history.push('/login')}}>Iniciar sesion</Button>
+                        </div>
+                        )
+                    }
                 </Toolbar>
             </AppBar>
             {dataPost && dataPost.map((value) => {
