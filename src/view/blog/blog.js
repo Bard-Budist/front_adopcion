@@ -89,7 +89,7 @@ const Blog = (props) => {
         if (dataPost.length == 0) {
             loadData()
         }
-        if (user == null) {
+        if (localStorage.getItem('usuario') && !user) {
             setUser(JSON.parse(localStorage.getItem('usuario')))
         }
 
@@ -116,12 +116,15 @@ const Blog = (props) => {
                         Mi compañero
                     </Typography>
                     <Button color="inherit" onClick={() => { history.push('/blog')}}>Inicio</Button>
-                    <Button color="inherit" onClick={() => { history.push('/posting/create')}}>Publicar</Button>
-                    { user &&
-                        <Button color="inherit">{ user.nombre }</Button>
-                    }
-                    <Button color="inherit" onClick={() => { cerrarSesion()}}>Cerrar sesion</Button>
                     
+                    {user && (
+                        <div>
+                            <Button color="inherit">{ user.nombre }</Button>
+                            <Button color="inherit" onClick={() => { history.push('/posting/create')}}>Publicar</Button>
+                            <Button color="inherit" onClick={() => { cerrarSesion()}}>Cerrar sesion</Button>
+                        </div>
+                        )
+                    } 
                 </Toolbar>
             </AppBar>
             {dataPost && dataPost.map((value) => {
