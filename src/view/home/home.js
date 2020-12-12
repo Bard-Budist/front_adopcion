@@ -18,7 +18,12 @@ const Home = (props) => {
     }
 
     const handleAdoptar = () => {
-        history.push('/blog')
+        const user = localStorage.getItem('usuario');
+        if (!user)  {
+            history.push('/login')
+        } else {
+            history.push('/blog')
+        }
     }
 
     return(
